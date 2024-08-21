@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class ThreeLevelPasswordSystem {
+    private static final String LEVEL1_PASSWORD = "password1";
+    private static final String LEVEL2_PASSWORD = "password2";
+    private static final String LEVEL3_PASSWORD = "password3";
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Level 1 Password: ");
+        String level1Password = scanner.nextLine();
+        if (!level1Password.equals(LEVEL1_PASSWORD)) {
+            System.out.println("Invalid Level 1 Password!");
+            return;
+        }
+        System.out.println("Level 1 Authentication Successful!");
+
+        System.out.print("Enter Level 2 Password: ");
+        String level2Password = scanner.nextLine();
+        if (!level2Password.equals(LEVEL2_PASSWORD)) {
+            System.out.println("Invalid Level 2 Password!");
+            return;
+        }
+        System.out.println("Level 2 Authentication Successful!");
+
+        System.out.print("Enter Level 3 Password: ");
+        String level3Password = scanner.nextLine();
+        if (!level3Password.equals(LEVEL3_PASSWORD)) {
+            System.out.println("Invalid Level 3 Password!");
+            return;
+        }
+        System.out.println("Level 3 Authentication Successful!");
+
+        System.out.println("Access Granted!");
+    }
+}
